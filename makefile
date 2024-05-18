@@ -11,4 +11,4 @@ link:
 	npm link
 
 test:
-	npm test
+	npx jest

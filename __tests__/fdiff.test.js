@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import parseData from '../src/parser.js';
 import findDiff from '../src/fdiff.js';
 // import fs from 'fs';
