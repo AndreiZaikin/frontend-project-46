@@ -9,3 +9,6 @@ lint:
 
 link:
 	npm link
+
+test:
+	npm test
