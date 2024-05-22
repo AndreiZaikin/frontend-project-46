@@ -12,3 +12,6 @@ link:
 
 test:
 	npx jest
+
+test-coverage:
+	npm test -- --coverage --coverageProvider=v8
