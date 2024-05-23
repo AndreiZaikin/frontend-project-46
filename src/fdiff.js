@@ -1,6 +1,9 @@
 import _ from 'lodash';
 
-export default function findDiff(obj1, obj2) {
+export default function findDiff(obj1, obj2, outFormat) {
+  if (outFormat === undefined) {
+    //console.log('default output format');
+  };
   const keys = _.union(Object.keys(obj1), Object.keys(obj2)).sort();
   const findDiff = (key) => {
     const obj1HasOwn = Object.hasOwn(obj1, key);

@@ -6,4 +6,8 @@ const getData = (filepath) => {
   return fs.readFileSync(normFilePath, "utf-8");  
 };
 
-export { getData }
+const getFormat = (filepath) => {
+  return path.extname(filepath).replace('.', '').toLowerCase();
+};
+
+export { getData, getFormat }

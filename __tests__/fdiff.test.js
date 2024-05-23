@@ -2,14 +2,24 @@
 import parseData from '../src/parser.js';
 import findDiff from '../src/fdiff.js';
 // import fs from 'fs';
-import { getData } from '../src/utils.js';
+import { getData, getFormat } from '../src/utils.js';
 
-test('finding difference', () => {
-  const correctDiff = getData('diff.txt');
-  const data1 = getData('file1.json');
-  const data2 = getData('file2.json')
-  const obj1 = parseData(data1);
-  const obj2 = parseData(data2);
+const correctDiff = getData('diff.txt');
 
-  expect(findDiff(obj1, obj2)).toEqual(correctDiff);
+test('comparing json files', () => {
+  const arrPath = ['file1.json', 'file2.json']
+  const objects = arrPath.map((path) => parseData(getData(path), getFormat(path)));
+  expect(findDiff(...objects)).toEqual(correctDiff);
+});
+
+test('comparing yml files', () => {
+  const arrPath = ['file1.yml', 'file2.yml']
+  const objects = arrPath.map((path) => parseData(getData(path), getFormat(path)));
+  expect(findDiff(...objects)).toEqual(correctDiff);
+});
+
+test('comparing yaml files', () => {
+  const arrPath = ['file1.yaml', 'file2.yaml']
+  const objects = arrPath.map((path) => parseData(getData(path), getFormat(path)));
+  expect(findDiff(...objects)).toEqual(correctDiff);
 });

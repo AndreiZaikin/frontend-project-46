@@ -9,4 +9,5 @@
 * Генерация отчета в виде plain text, stylish и json
 ## Step 4 demo
 [![asciicast](https://asciinema.org/a/B8ucqlXKbse9A3dv5njqPl6tj.svg)](https://asciinema.org/a/B8ucqlXKbse9A3dv5njqPl6tj)
-
+## Step 6 demo
+[![asciicast](https://asciinema.org/a/tjDw1ifxS71QJOREYoSAXEpj0.svg)](https://asciinema.org/a/tjDw1ifxS71QJOREYoSAXEpj0)

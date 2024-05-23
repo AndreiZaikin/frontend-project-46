@@ -1,4 +1,14 @@
-export default function parseData(data) {
-  const obj = JSON.parse(data);
-  return obj;
+import yaml from 'js-yaml';
+
+export default function parseData(data, format) {
+  switch (format) {
+    case 'yaml':
+      return yaml.load(data);
+    case 'yml':
+      return yaml.load(data);
+    case 'json':
+      return JSON.parse(data);
+    default:
+      return {};
+  }
 }

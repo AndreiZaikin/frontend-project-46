@@ -11,7 +11,7 @@ program
   .option('-V, --version', 'output the version number')
   .option('-f, --format [type]', 'output format')
   .action((filepath1, filepath2, options) => {
-    console.log(genDiff(filepath1, filepath2, options.format));
+    console.log(genDiff([filepath1, filepath2], options.format));
   });
   
   program.parse();
